@@ -1,0 +1,113 @@
+==================================================================
+  DESIGN IDEAS  —  AI-ASSISTED PLANNING NOTES
+  Project: Focustack Landing Page
+==================================================================
+
+This file documents the ideas and copy generated with AI assistance
+during the planning phase (Step 2). All final HTML and CSS was
+written by hand based on this plan.
+
+
+------------------------------------------------------------------
+APP CONCEPT
+------------------------------------------------------------------
+Name:           Focustack
+Tagline:        Stack your focus. Ship what matters.
+Target users:   Remote teams struggling with context-switching
+Core idea:      Batch tasks into focused sprints so every team
+                member always knows exactly what to work on next.
+
+
+------------------------------------------------------------------
+HERO COPY
+------------------------------------------------------------------
+Headline:   Stop context-switching. Start shipping.
+Subtext:    Focustack groups your team's tasks into focused sprints
+            — so everyone knows what to work on, right now.
+Button:     Get started free
+
+
+------------------------------------------------------------------
+FEATURE CARDS (3)
+------------------------------------------------------------------
+1. Sprint Stacking
+   Group related tasks into time-boxed blocks. Your team enters
+   a flow state and stays there.
+
+2. Team Pulse
+   See what everyone's focused on at a glance — no standups,
+   no interruptions.
+
+3. Zero Distraction Mode
+   One task. One screen. Full focus. Notifications wait until
+   your sprint ends.
+
+
+------------------------------------------------------------------
+CALL TO ACTION
+------------------------------------------------------------------
+Heading:  Ready to actually finish things?
+Subtext:  Join 4,000+ teams who ship more with less chaos.
+Button:   Start your free sprint
+
+
+------------------------------------------------------------------
+COLOUR PALETTE
+------------------------------------------------------------------
+Background:   #0d0f12   (near-black)
+Surface:      #161a20   (card backgrounds)
+Border:       #252b35   (subtle dividers)
+Accent green: #4ade80   (primary CTA color)
+Accent cyan:  #22d3ee   (secondary highlights)
+Text:         #e8eaf0   (off-white body text)
+Muted:        #6b7280   (labels, footer text)
+
+
+------------------------------------------------------------------
+FONT PAIRING  (Google Fonts)
+------------------------------------------------------------------
+Headings:  Syne (700, 800) — geometric, distinctive
+Body:      DM Sans (400, 500) — clean and readable
+
+
+------------------------------------------------------------------
+LAYOUT STRUCTURE
+------------------------------------------------------------------
+- Header:   sticky nav bar — logo left, CTA button right (Flexbox)
+- Hero:     full-viewport centered column (Flexbox)
+- Features: 3-column card row on desktop (CSS Grid)
+            collapses to 1 column on mobile (media query)
+- CTA:      centered box with radial gradient accent (Flexbox)
+- Footer:   centered stacked links row (Flexbox)
+
+Responsive breakpoint: max-width 700px
+  -> features grid switches from repeat(3, 1fr) to 1fr
+
+
+------------------------------------------------------------------
+MY OWN CREATIVE INPUT  (beyond what AI suggested)
+------------------------------------------------------------------
+- Chose a dark theme over the AI's suggested light palette because
+  it better suits a focus tool used during late-night work sessions
+- Added emoji icons to each feature card for quick visual scanning
+- Introduced a radial gradient glow behind the hero and CTA sections
+  to add depth without using images
+- Made the header sticky (not suggested by AI) so the "Get started"
+  button stays reachable while the user scrolls
+- Left-aligned card body text while keeping section headings centered
+  — AI suggested fully centered throughout, but left-aligned text
+  reads better for longer descriptions
+- Added a non-breaking hyphen in the headline so "context-switching"
+  never breaks across two lines on narrow screens
+
+
+------------------------------------------------------------------
+AI TOOL USED
+------------------------------------------------------------------
+Tool:    Claude (Anthropic) — claude.ai
+Prompts: Asked for app name and tagline, feature card copy,
+         colour palette with hex codes, font pairing, and
+         recommended layout structure for a responsive landing page.
+
+==================================================================
+
