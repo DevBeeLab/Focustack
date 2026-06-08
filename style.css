@@ -1,0 +1,301 @@
+/* ============================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  --bg:        #0d0f12;
+  --surface:   #161a20;
+  --border:    #252b35;
+  --accent:    #4ade80;
+  --accent-2:  #22d3ee;
+  --text:      #e8eaf0;
+  --muted:     #6b7280;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   HEADER / NAV  — flexbox: logo left, links right
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2.5rem;
+  background-color: rgba(13, 15, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-btn {
+  background-color: var(--accent);
+  color: #0d0f12;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.nav-btn:hover {
+  color: #0d0f12;
+  opacity: 0.85;
+}
+
+/* ============================================================
+   HERO  — flexbox: centered column, full viewport height
+   ============================================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(74, 222, 128, 0.08) 0%, transparent 70%),
+    var(--bg);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.hero .subtext {
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ============================================================
+   SHARED BUTTON
+   ============================================================ */
+.btn-primary {
+  background-color: var(--accent);
+  color: #0d0f12;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   FEATURES  — CSS Grid: 3-column card row
+   ============================================================ */
+.features {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: var(--surface);
+}
+
+.features h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  text-align: left;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cards:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-heading {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   CTA  — centered, accent-bordered box
+   ============================================================ */
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(ellipse 50% 60% at 50% 100%, rgba(34, 211, 238, 0.07) 0%, transparent 70%),
+    var(--bg);
+}
+
+.cta h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.cta .subtext {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   FOOTER  — flexbox: stacked center
+   ============================================================ */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2.5rem 2rem;
+  border-top: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.footer-links {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--border);
+}
+
+/* ============================================================
+   RESPONSIVE  — single column on mobile (max-width: 700px)
+   ============================================================ */
+@media (max-width: 700px) {
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 5rem 1.25rem;
+  }
+
+  .features {
+    padding: 4rem 1.25rem;
+  }
+
+  /* Grid collapses from 3 columns → 1 column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 4rem 1.25rem;
+  }
+}
